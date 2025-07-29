@@ -1,0 +1,450 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "TrainingNuker",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "TrainingNuker",
+   LoadingSubtitle = "by teamfogiscoming",
+   ShowText = "Rayfield", -- for mobile users to unhide rayfield, change if you'd like
+   Theme = "DarkBlue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   ToggleUIKeybind = "Q", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "TrainingNuker"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+   
+})
+
+local Tab = Window:CreateTab("Teleports", 4483362458) -- Title, Image
+
+local Tab3 = Window:CreateTab("Chats", 4483362458) -- Title, Image
+
+local Tab2 = Window:CreateTab("Misc", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to Group A",
+   Callback = function()
+   -- Place this LocalScript in StarterPlayerScripts
+
+local teleportPosition = Vector3.new(212, 4, 19)
+
+-- Wait for the player's character to load
+local player = game.Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(character)
+    -- Wait until the HumanoidRootPart exists
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    -- Teleport the player
+    hrp.CFrame = CFrame.new(teleportPosition)
+end)
+
+-- Optional: teleport immediately if character already loaded
+if player.Character then
+    local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        hrp.CFrame = CFrame.new(teleportPosition)
+    end
+end
+
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to Group B",
+   Callback = function()
+   -- Place this LocalScript in StarterPlayerScripts
+
+local teleportPosition = Vector3.new(118, 4, 20)
+
+-- Wait for the player's character to load
+local player = game.Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(character)
+    -- Wait until the HumanoidRootPart exists
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    -- Teleport the player
+    hrp.CFrame = CFrame.new(teleportPosition)
+end)
+
+-- Optional: teleport immediately if character already loaded
+if player.Character then
+    local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        hrp.CFrame = CFrame.new(teleportPosition)
+    end
+end
+
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to Group C",
+   Callback = function()
+   -- Place this LocalScript in StarterPlayerScripts
+
+local teleportPosition = Vector3.new(29, 4, 15)
+
+-- Wait for the player's character to load
+local player = game.Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(character)
+    -- Wait until the HumanoidRootPart exists
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    -- Teleport the player
+    hrp.CFrame = CFrame.new(teleportPosition)
+end)
+
+-- Optional: teleport immediately if character already loaded
+if player.Character then
+    local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        hrp.CFrame = CFrame.new(teleportPosition)
+    end
+end
+
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to Group D",
+   Callback = function()
+   -- Place this LocalScript in StarterPlayerScripts
+
+local teleportPosition = Vector3.new(211, 4, -250)
+
+-- Wait for the player's character to load
+local player = game.Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(character)
+    -- Wait until the HumanoidRootPart exists
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    -- Teleport the player
+    hrp.CFrame = CFrame.new(teleportPosition)
+end)
+
+-- Optional: teleport immediately if character already loaded
+if player.Character then
+    local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        hrp.CFrame = CFrame.new(teleportPosition)
+    end
+end
+
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to Group E",
+   Callback = function()
+   -- Place this LocalScript in StarterPlayerScripts
+
+local teleportPosition = Vector3.new(120, 4, -250)
+
+-- Wait for the player's character to load
+local player = game.Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(character)
+    -- Wait until the HumanoidRootPart exists
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    -- Teleport the player
+    hrp.CFrame = CFrame.new(teleportPosition)
+end)
+
+-- Optional: teleport immediately if character already loaded
+if player.Character then
+    local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        hrp.CFrame = CFrame.new(teleportPosition)
+    end
+end
+
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to Group F",
+   Callback = function()
+   -- Place this LocalScript in StarterPlayerScripts
+
+local teleportPosition = Vector3.new(185, 4, -104)
+
+-- Wait for the player's character to load
+local player = game.Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(character)
+    -- Wait until the HumanoidRootPart exists
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    -- Teleport the player
+    hrp.CFrame = CFrame.new(teleportPosition)
+end)
+
+-- Optional: teleport immediately if character already loaded
+if player.Character then
+    local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        hrp.CFrame = CFrame.new(teleportPosition)
+    end
+end
+
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to Staff Food Area",
+   Callback = function()
+   -- Place this LocalScript in StarterPlayerScripts
+
+local teleportPosition = Vector3.new(356, 23, -116)
+
+-- Wait for the player's character to load
+local player = game.Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(character)
+    -- Wait until the HumanoidRootPart exists
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    -- Teleport the player
+    hrp.CFrame = CFrame.new(teleportPosition)
+end)
+
+-- Optional: teleport immediately if character already loaded
+if player.Character then
+    local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        hrp.CFrame = CFrame.new(teleportPosition)
+    end
+end
+
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to Upstairs Staff Hallway",
+   Callback = function()
+   -- Place this LocalScript in StarterPlayerScripts
+
+local teleportPosition = Vector3.new(323, 23, -118)
+
+-- Wait for the player's character to load
+local player = game.Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(character)
+    -- Wait until the HumanoidRootPart exists
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    -- Teleport the player
+    hrp.CFrame = CFrame.new(teleportPosition)
+end)
+
+-- Optional: teleport immediately if character already loaded
+if player.Character then
+    local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        hrp.CFrame = CFrame.new(teleportPosition)
+    end
+end
+
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to Staff Spawn",
+   Callback = function()
+   -- Place this LocalScript in StarterPlayerScripts
+
+local teleportPosition = Vector3.new(306, 4, -109)
+
+-- Wait for the player's character to load
+local player = game.Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(character)
+    -- Wait until the HumanoidRootPart exists
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    -- Teleport the player
+    hrp.CFrame = CFrame.new(teleportPosition)
+end)
+
+-- Optional: teleport immediately if character already loaded
+if player.Character then
+    local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        hrp.CFrame = CFrame.new(teleportPosition)
+    end
+end
+
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to Staff Stage",
+   Callback = function()
+   -- Place this LocalScript in StarterPlayerScripts
+
+local teleportPosition = Vector3.new(332, 6, -116)
+
+-- Wait for the player's character to load
+local player = game.Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(character)
+    -- Wait until the HumanoidRootPart exists
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    -- Teleport the player
+    hrp.CFrame = CFrame.new(teleportPosition)
+end)
+
+-- Optional: teleport immediately if character already loaded
+if player.Character then
+    local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        hrp.CFrame = CFrame.new(teleportPosition)
+    end
+end
+
+   end,
+})
+
+local Button = Tab2:CreateButton({
+   Name = "Delete Team Doors",
+   Callback = function()
+         game.Workspace.OtherDoors:Destroy()
+   end,
+})
+
+local Button = Tab2:CreateButton({
+   Name = "Delete Staff Walls",
+   Callback = function()
+         game.Workspace.InvisibleWalls:Destroy()
+   end,
+})
+
+local Button = Tab2:CreateButton({
+   Name = "Insta-pass Application",
+   Callback = function()
+         local args = {
+	{
+		[2] = 0
+	}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Application"):InvokeServer(unpack(args))
+local args = {
+	{
+		"Answer4",
+		1
+	}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Application"):InvokeServer(unpack(args))
+local args = {
+	{
+		"Answer2",
+		2
+	}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Application"):InvokeServer(unpack(args))
+local args = {
+	{
+		"Answer1",
+		3
+	}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Application"):InvokeServer(unpack(args))
+local args = {
+	{
+		"Answer4",
+		4
+	}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Application"):InvokeServer(unpack(args))
+local args = {
+	{
+		"Answer2",
+		5
+	}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Application"):InvokeServer(unpack(args))
+
+game.Players.LocalPlayer:Kick("You have been ranked to Trainee!")
+   end,
+})
+
+local Button = Tab3:CreateButton({
+   Name = "Clear Chat (SS)",
+   Callback = function()
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(";clearchat\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r.")
+   end,
+})
+
+local Button = Tab3:CreateButton({
+   Name = "Greeting",
+   Callback = function()
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Hello, welcome to Washiez! What kind of ticket can I get you? The options are Regular, Extra, and Deluxe! ")
+   end,
+})
+
+local Button = Tab3:CreateButton({
+   Name = "Leak Trainer Guides Part 1",
+   Callback = function()
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Welcome to the training session! As your trainer, I will guide you through everything you need to do in order to rank up.")
+	wait(1)
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Before we begin, make sure you can see my chats. ")
+	wait(1)
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Unless instructed to do so, leaving your seat will result in a warning.")
+	wait(1)
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("The first stage of training will be the notes section. Listen carefully as I explain the training procedure you will undergo during your time at Washiez.")
+	wait(1)
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("By passing THREE training sessions, you will receive the rank Head Operator.")
+	wait(1)
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Each training session you attend, you will be promoted ONE rank.")
+	wait(1)
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("By passing this training session, you will be ranked to Junior Operator and can work at the car wash.")
+	wait(1)
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Continue attending training sessions to work your way up the ranks.")
+	wait(1)
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Although, once you achieve the rank Head Operator, you will NOT be able to attend training sessions.")
+	wait(1)
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Instead, work hard and play the game frequently for a chance at being promoted to Shift Leader. ")
+	wait(1)
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Shift Leaders can use the moderation system to handle trollers at the car wash and help out at training sessions.")
+	wait(1)
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("In future trainings, you will be given a detailed explanation of what it takes to become a Shift Leader.")
+	wait(1)
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("It's also important to know that the ranks at Washiez are separated into categories.")
+	wait(1)
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Junior Operators, Senior Operators, and Head Operators are in the Entry Team.")
+	wait(1)
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Shift Leaders, Super-visors, Assistant Managers, and General Managers are in the Super-vision Team.")
+	wait(1)
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("I will explain more about the Super-vision Team later in the training and how they will be useful to you.")
+	wait(1)
+   end,
+})
+
+
+
+
+
+
+
+Rayfield:LoadConfiguration()
