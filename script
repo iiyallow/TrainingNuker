@@ -38,6 +38,8 @@ local Window = Rayfield:CreateWindow({
    
 })
 
+local Tab4 = Window:CreateTab("Methods", 4483362458) -- Title, Image
+
 local Tab = Window:CreateTab("Teleports", 4483362458) -- Title, Image
 
 local Tab3 = Window:CreateTab("Chats", 4483362458) -- Title, Image
@@ -392,7 +394,7 @@ game.Players.LocalPlayer:Kick("You have been ranked to Trainee!")
 local Button = Tab3:CreateButton({
    Name = "Clear Chat (SS)",
    Callback = function()
-         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(";clearchat\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r.")
+         game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("hi\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\rCleared Chat.")
    end,
 })
 
@@ -407,39 +409,54 @@ local Button = Tab3:CreateButton({
    Name = "Leak Trainer Guides Part 1",
    Callback = function()
          game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Welcome to the training session! As your trainer, I will guide you through everything you need to do in order to rank up.")
-	wait(1)
+	wait(2)
          game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Before we begin, make sure you can see my chats. ")
-	wait(1)
+	wait(2)
          game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Unless instructed to do so, leaving your seat will result in a warning.")
-	wait(1)
+	wait(2)
          game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("The first stage of training will be the notes section. Listen carefully as I explain the training procedure you will undergo during your time at Washiez.")
-	wait(1)
+	wait(2)
          game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("By passing THREE training sessions, you will receive the rank Head Operator.")
-	wait(1)
+	wait(2)
          game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Each training session you attend, you will be promoted ONE rank.")
-	wait(1)
+	wait(2)
          game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("By passing this training session, you will be ranked to Junior Operator and can work at the car wash.")
-	wait(1)
+	wait(2)
          game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Continue attending training sessions to work your way up the ranks.")
-	wait(1)
+	wait(2)
          game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Although, once you achieve the rank Head Operator, you will NOT be able to attend training sessions.")
-	wait(1)
+	wait(2)
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Instead, work hard and play the game frequently for a chance at being promoted to Shift Leader. ")
-	wait(1)
+	wait(2)
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Shift Leaders can use the moderation system to handle trollers at the car wash and help out at training sessions.")
-	wait(1)
+	wait(2)
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("In future trainings, you will be given a detailed explanation of what it takes to become a Shift Leader.")
-	wait(1)
+	wait(2)
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("It's also important to know that the ranks at Washiez are separated into categories.")
-	wait(1)
+	wait(2)
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Junior Operators, Senior Operators, and Head Operators are in the Entry Team.")
-	wait(1)
+	wait(2)
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Shift Leaders, Super-visors, Assistant Managers, and General Managers are in the Super-vision Team.")
-	wait(1)
+	wait(2)
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("I will explain more about the Super-vision Team later in the training and how they will be useful to you.")
-	wait(1)
+	wait(2)
    end,
 })
+
+local Button = Tab4:CreateButton({
+   Name = "Get Fake Staff Panel (Main Game ONLY)",
+   Callback = function()
+        game.Players.LocalPlayer.PlayerGui.MainUI.SideMenu.List.StaffMenu.Visible = true
+   end,
+})
+
+local Button = Tab3:CreateButton({
+   Name = "Training Cancelled Troll Announcement (SS)",
+   Callback = function()
+        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("hi\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r[Announcement]: The Training has been cancelled!")
+   end,
+})
+
 
 
 
