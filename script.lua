@@ -457,6 +457,27 @@ local Button = Tab3:CreateButton({
    end,
 })
 
+local Button = Tab2:CreateButton({
+   Name = "Load washiez.lol",
+   Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/burntribs24/burntribs.space/42a84effa09bfe6da4cba839b165e7a11e587208/washiez.lol/script.lua"))()
+   end,
+})
+
+local Button = Tab4:CreateButton({
+   Name = "Get Chat Preset Panel (SS)",
+   Callback = function()
+        game.Players.LocalPlayer.PlayerGui.MainUI.SideMenu.List.ChatMenu.Visible = true
+   end,
+})
+
+local Button = Tab2:CreateButton({
+   Name = "Destroy GUI",
+   Callback = function()
+        Rayfield:Destroy()
+   end,
+})
+
 
 
 
