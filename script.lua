@@ -42,7 +42,7 @@ local Tab4 = Window:CreateTab("Methods", 4483362458) -- Title, Image
 
 local Tab5 = Window:CreateTab("Character", 7992557358) -- Title, Image
 
-local Tab = Window:CreateTab("Teleports", 4483362458) -- Title, Image
+local Tab = Window:CreateTab("Teleports", 2129457772) -- Title, Image
 
 local Tab3 = Window:CreateTab("Chats", 77955658249798) -- Title, Image
 
