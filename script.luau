@@ -14,7 +14,7 @@ local Window = Rayfield:CreateWindow({
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
    ConfigurationSaving = {
-      Enabled = false,
+      Enabled = true,
       FolderName = nil, -- Create a custom folder for your hub/game
       FileName = "TrainingNuker"
    },
@@ -459,6 +459,13 @@ local Button = Tab3:CreateButton({
    end,
 })
 
+local Button = Tab3:CreateButton({
+   Name = "Server Shutdown Troll (SS)",
+   Callback = function()
+        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("hi\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r[Announcement]: The server is shutting down in 1 minute!")
+   end,
+})
+
 local Button = Tab2:CreateButton({
    Name = "Load washiez.lol",
    Callback = function()
@@ -553,17 +560,6 @@ local Slider = Tab5:CreateSlider({
    Flag = "Grav", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
         game.Workspace.Gravity = Value
-   end,
-})
-
-local Button = Tab5:CreateButton({
-   Name = "Rejoin",
-   Callback = function()
-        local ts = game:GetService("TeleportService")
-
-        local p = game:GetService("Players").LocalPlayer
-
-        ts:Teleport(game.PlaceId, p)
    end,
 })
 
