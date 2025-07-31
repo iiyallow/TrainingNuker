@@ -14,7 +14,7 @@ local Window = Rayfield:CreateWindow({
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
    ConfigurationSaving = {
-      Enabled = true,
+      Enabled = false,
       FolderName = nil, -- Create a custom folder for your hub/game
       FileName = "TrainingNuker"
    },
@@ -39,6 +39,8 @@ local Window = Rayfield:CreateWindow({
 })
 
 local Tab4 = Window:CreateTab("Methods", 4483362458) -- Title, Image
+
+local Tab5 = Window:CreateTab("Character", 4483362458) -- Title, Image
 
 local Tab = Window:CreateTab("Teleports", 4483362458) -- Title, Image
 
@@ -478,8 +480,81 @@ local Button = Tab2:CreateButton({
    end,
 })
 
+local Slider = Tab5:CreateSlider({
+   Name = "Speed",
+   Range = {1, 125},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "Speed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+   end,
+})
 
+local Slider = Tab5:CreateSlider({
+   Name = "Jumppower",
+   Range = {1, 200},
+   Increment = 10,
+   Suffix = "Power",
+   CurrentValue = 50,
+   Flag = "", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+   end,
+})
 
+local Toggle = Tab5:CreateToggle({
+   Name = "Noclip",
+   CurrentValue = false,
+   Flag = "Noclip", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        if Value == true then
+            noclip()
+
+        else
+            clip()
+
+        end
+   end,
+})
+
+local Noclip = nil
+local Clip = nil
+
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+noclip() -- to toggle noclip() and clip()
+
+local Slider = Tab5:CreateSlider({
+   Name = "Gravity",
+   Range = {1, 200},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 100,
+   Flag = "Grav", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Workspace.Gravity = Value
+   end,
+})
 
 
 
