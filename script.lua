@@ -51,6 +51,16 @@ local Tab2 = Window:CreateTab("Misc", 4483362458) -- Title, Image
 local Label = Tab4:CreateLabel("Number of Spawned Cars: N/A", 123358713103625, Color3.fromRGB(255, 255, 255), true) -- Title, Icon, Color, IgnoreTheme
 
 
+while true do
+    task.wait(5)
+    
+    local spawnedCarsFolder = game.Workspace:FindFirstChild("SpawnedCars")
+    if spawnedCarsFolder and spawnedCarsFolder:IsA("Folder") then
+        local numberOfCars = #spawnedCarsFolder:GetChildren()
+        Label:Set("Number of Spawned Cars: " .. numberOfCars, 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+    end
+end
+
 local Button = Tab:CreateButton({
    Name = "Teleport to Group A",
    Callback = function()
