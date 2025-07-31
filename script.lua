@@ -567,16 +567,7 @@ local Slider = Tab5:CreateSlider({
 })
 
 
-while true do
-    
-    
-    local spawnedCarsFolder = game.Workspace:FindFirstChild("SpawnedCars")
-    if spawnedCarsFolder and spawnedCarsFolder:IsA("Folder") then
-        local numberOfCars = #spawnedCarsFolder:GetChildren()
-        Label:Set("Number of Spawned Cars: " .. numberOfCars, 123358713103625, Color3.fromRGB(255, 255, 255), true) -- Title, Icon, Color, IgnoreTheme
-    end
-	
-end
+
 
 
 
