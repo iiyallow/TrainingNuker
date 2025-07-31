@@ -51,17 +51,6 @@ local Tab2 = Window:CreateTab("Misc", 4483362458) -- Title, Image
 local Label = Tab4:CreateLabel("Number of Spawned Cars: N/A", 123358713103625, Color3.fromRGB(255, 255, 255), true) -- Title, Icon, Color, IgnoreTheme
 
 
-while true do
-    
-    
-    local spawnedCarsFolder = game.Workspace:FindFirstChild("SpawnedCars")
-    if spawnedCarsFolder and spawnedCarsFolder:IsA("Folder") then
-        local numberOfCars = #spawnedCarsFolder:GetChildren()
-        Label:Set("Number of Spawned Cars: " .. numberOfCars, 123358713103625, Color3.fromRGB(255, 255, 255), true) -- Title, Icon, Color, IgnoreTheme
-    end
-	
-end
-
 local Button = Tab:CreateButton({
    Name = "Teleport to Group A",
    Callback = function()
@@ -567,15 +556,27 @@ noclip() -- to toggle noclip() and clip()
 
 local Slider = Tab5:CreateSlider({
    Name = "Gravity",
-   Range = {1, 200},
+   Range = {1, 500},
    Increment = 1,
-   Suffix = "Speed",
+   Suffix = "Gravity",
    CurrentValue = 100,
    Flag = "Grav", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
         game.Workspace.Gravity = Value
    end,
 })
+
+
+while true do
+    
+    
+    local spawnedCarsFolder = game.Workspace:FindFirstChild("SpawnedCars")
+    if spawnedCarsFolder and spawnedCarsFolder:IsA("Folder") then
+        local numberOfCars = #spawnedCarsFolder:GetChildren()
+        Label:Set("Number of Spawned Cars: " .. numberOfCars, 123358713103625, Color3.fromRGB(255, 255, 255), true) -- Title, Icon, Color, IgnoreTheme
+    end
+	
+end
 
 
 
