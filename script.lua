@@ -48,7 +48,7 @@ local Tab3 = Window:CreateTab("Chats", 77955658249798) -- Title, Image
 
 local Tab2 = Window:CreateTab("Misc", 4483362458) -- Title, Image
 
-clip()
+
 
 
 local Button = Tab:CreateButton({
