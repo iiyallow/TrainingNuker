@@ -50,6 +50,8 @@ local Tab2 = Window:CreateTab("Misc", 4483362458) -- Title, Image
 
 clip()
 
+local Label = Tab4:CreateLabel("Raw Honey: ", 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+
 local Button = Tab:CreateButton({
    Name = "Teleport to Group A",
    Callback = function()
@@ -590,6 +592,13 @@ end
 
    end,
 })
+
+while true do
+	local children = game.Workspace.SpawnedCars:GetChildren()
+	local count = #children
+
+	Label:Set("Raw Honey: " .. count, 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+end
 
 
 
