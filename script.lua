@@ -48,7 +48,6 @@ local Tab3 = Window:CreateTab("Chats", 77955658249798) -- Title, Image
 
 local Tab2 = Window:CreateTab("Misc", 4483362458) -- Title, Image
 
-local Label = Tab4:CreateLabel("Number of Spawned Cars: N/A", 123358713103625, Color3.fromRGB(0, 0, 0), true) -- Title, Icon, Color, IgnoreTheme
 
 
 local Button = Tab:CreateButton({
@@ -566,7 +565,31 @@ local Slider = Tab5:CreateSlider({
    end,
 })
 
+local Button = Tab4:CreateButton({
+   Name = "Make Every Car Drivable (WORKING)",
+   Callback = function()
+        -- Server-side script (e.g., in ServerScriptService)
 
+local carFolder = game.Workspace:WaitForChild("SpawnedCar")
+
+-- Function to recursively process each descendant
+local function processModel(model)
+	for _, descendant in ipairs(model:GetDescendants()) do
+		if descendant:IsA("BasePart") then
+			descendant.CanCollide = false
+		elseif descendant:IsA("VehicleSeat") then
+			descendant.Disabled = false
+		end
+	end
+end
+
+-- Loop through each child in SpawnedCar and process it
+for _, car in ipairs(carFolder:GetChildren()) do
+	processModel(car)
+end
+
+   end,
+})
 
 
 
