@@ -52,14 +52,14 @@ local Label = Tab4:CreateLabel("Number of Spawned Cars: N/A", 123358713103625, C
 
 
 while true do
-    task.wait(5)
+    
     
     local spawnedCarsFolder = game.Workspace:FindFirstChild("SpawnedCars")
     if spawnedCarsFolder and spawnedCarsFolder:IsA("Folder") then
         local numberOfCars = #spawnedCarsFolder:GetChildren()
         Label:Set("Number of Spawned Cars: " .. numberOfCars, 123358713103625, Color3.fromRGB(255, 255, 255), true) -- Title, Icon, Color, IgnoreTheme
     end
-	task.wait(3)
+	
 end
 
 local Button = Tab:CreateButton({
