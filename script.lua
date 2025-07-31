@@ -48,7 +48,7 @@ local Tab3 = Window:CreateTab("Chats", 77955658249798) -- Title, Image
 
 local Tab2 = Window:CreateTab("Misc", 4483362458) -- Title, Image
 
-local Label = Tab4:CreateLabel("Number of Spawned Cars: N/A", 123358713103625, Color3.fromRGB(255, 255, 255), true) -- Title, Icon, Color, IgnoreTheme
+local Label = Tab4:CreateLabel("Number of Spawned Cars: N/A", 123358713103625, Color3.fromRGB(0, 0, 0), true) -- Title, Icon, Color, IgnoreTheme
 
 
 local Button = Tab:CreateButton({
