@@ -14,7 +14,7 @@ local Window = Rayfield:CreateWindow({
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
    ConfigurationSaving = {
-      Enabled = false,
+      Enabled = true,
       FolderName = nil, -- Create a custom folder for your hub/game
       FileName = "TrainingNuker"
    },
@@ -553,6 +553,17 @@ local Slider = Tab5:CreateSlider({
    Flag = "Grav", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
         game.Workspace.Gravity = Value
+   end,
+})
+
+local Button = Tab5:CreateButton({
+   Name = "Rejoin",
+   Callback = function()
+        local ts = game:GetService("TeleportService")
+
+        local p = game:GetService("Players").LocalPlayer
+
+        ts:Teleport(game.PlaceId, p)
    end,
 })
 
