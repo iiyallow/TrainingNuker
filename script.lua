@@ -566,4 +566,29 @@ local Slider = Tab5:CreateSlider({
    end,
 })
 
+local Button = Tab4:CreateButton({
+   Name = "Make Every Car Drivable (Car Must Exist!!)",
+   Callback = function()
+        -- Server-side script (e.g., in ServerScriptService)
+
+local carFolder = game.Workspace:WaitForChild("SpawnedCar")
+
+-- Function to recursively process each descendant
+local function processModel(model)
+	for _, descendant in ipairs(model:GetDescendants()) do
+		if descendant:IsA("BasePart") then
+			descendant.CanCollide = false
+		elseif descendant:IsA("VehicleSeat") then
+			descendant.Disabled = false
+		end
+	end
+end
+
+-- Loop through each child in SpawnedCar and process it
+for _, car in ipairs(carFolder:GetChildren()) do
+	processModel(car)
+end
+
+   end,
+})
 
